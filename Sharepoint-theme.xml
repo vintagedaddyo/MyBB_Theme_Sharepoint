@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Sharepoint" version="1820">
+<theme name="Sharepoint" version="1830">
 	<properties>
-		<templateset><![CDATA[16]]></templateset>
+		<templateset><![CDATA[34]]></templateset>
 		<editortheme><![CDATA[office.css]]></editortheme>
 		<imgdir><![CDATA[themes/sharepoint]]></imgdir>
 		<logo><![CDATA[themes/sharepoint/logo.png]]></logo>
@@ -11,7 +11,550 @@
 		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:9:"modcp.css";i:4;s:17:"thread_status.css";i:5;s:14:"showthread.css";i:6;s:16:"star_ratings.css";i:7;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="css3.css" version="1820"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1830"><![CDATA[/*
+ * MyBB: Sharepoint Frontend Theme 
+ *
+ * File: usercp.css File
+ * 
+ * Authors: MyBB Themes & Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-repeat: no-repeat;
+}
+
+.usercp_nav_composepm {
+	background-image: url('themes/sharepoint/usercp/composepm.png');
+}
+
+.usercp_nav_pmfolder {
+    background-image: url('themes/sharepoint/usercp/pmfolder.png'); 
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/sub_pmfolder.png');  
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/trash_pmfolder.png');  
+}
+
+.usercp_nav_pmtracking {
+	background-image: url('themes/sharepoint/usercp/pmtracking.png');  
+}
+
+.usercp_nav_pmfolders {
+    background-image: url('themes/sharepoint/usercp/editfolders.png');  
+}
+
+.usercp_nav_profile {
+	background-image: url('themes/sharepoint/usercp/profile.png');  
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+
+	background-image: url('themes/sharepoint/usercp/email.png');  
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/password.png');  
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/username.png');  
+} 
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/editsig.png');  
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background-image: url('themes/sharepoint/usercp/avatar.png');  
+}
+
+.usercp_nav_options {
+	background-image: url('themes/sharepoint/usercp/options.png');  
+}
+
+.usercp_nav_usergroups {
+	background-image: url('themes/sharepoint/usercp/usergroups.png');  
+}
+
+.usercp_nav_editlists {
+	background-image: url('themes/sharepoint/usercp/editlists.png'); 
+}
+
+.usercp_nav_attachments {
+	background-image: url('themes/sharepoint/usercp/attachments.png'); 
+}
+
+.usercp_nav_drafts {
+	background-image: url('themes/sharepoint/usercp/drafts.png');  
+}
+
+.usercp_nav_subscriptions {
+	background-image: url('themes/sharepoint/usercp/subscriptions.png');  
+}
+
+.usercp_nav_fsubscriptions {
+	background-image: url('themes/sharepoint/usercp/fsubscriptions.png');  
+}
+
+.usercp_nav_viewprofile {
+	background-image: url('themes/sharepoint/usercp/viewprofile.png'); 
+}
+
+.usercp_nav_home {
+	background-image: url('themes/sharepoint/usercp/home.png');  
+}
+
+.usercp_notepad {
+	width: 99%;
+}
+
+.usercp_container {
+	margin: 5px;
+	padding: 8px;
+}
+
+.pmspace {
+	float: right;
+	margin: -3px 5px;
+}
+
+.pmspace_container {
+	background: #fff;
+	border: 1px solid #ccc;
+	width: 100px;
+	display: inline-block;
+}
+
+.pmspace_used {
+	display: inline-block;
+	color: #fff;
+	margin: -1px;
+}
+
+.pmspace_used.low {
+	border: 1px solid #0c5a01;
+	background: #167203;
+}
+
+.pmspace_used.medium {
+	background: #ff862b;
+	border: 1px solid #d7611e;
+}
+
+.pmspace_used.high {
+	background: #e73c3c;
+	border: 1px solid #c00;
+}
+
+.pmspace_unused {
+	display: inline-block;
+}
+
+.pmspace_text {
+	padding: 1px 5px;
+	display: inline-block;
+}
+		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1830"><![CDATA[	/*
+ * MyBB: Sharepoint Frontend Theme 
+ *
+ * File: thread_status.css File
+ * 
+ * Authors: MyBB Themes & Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.thread_status {
+  display: inline-block;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 18px;
+}
+
+.thread_status.dot_folder {
+  background-image: url('themes/sharepoint/dot_folder.png');
+}
+
+.thread_status.dot_hotfolder {
+  background-image: url('themes/sharepoint/dot_hotfolder.png'); 
+}
+
+.thread_status.dot_hotclosefolder {
+  background-image: url('themes/sharepoint/dot_hotlockfolder.png'); 
+}
+
+.thread_status.dot_closefolder {
+ background-image: url('themes/sharepoint/dot_lockfolder.png');
+}
+
+.thread_status.dot_newfolder {
+ background-image: url('themes/sharepoint/dot_newfolder.png');
+}
+
+.thread_status.dot_newhotfolder {
+ background-image: url('themes/sharepoint/dot_newhotfolder.png'); 
+}
+
+.thread_status.dot_newhotclosefolder {
+ background-image: url('themes/sharepoint/dot_newhotlockfolder.png');  
+}
+
+.thread_status.dot_newclosefolder {
+ background-image: url('themes/sharepoint/dot_newlockfolder.png'); 
+}
+
+.thread_status.folder {
+ background-image: url('themes/sharepoint/folder.png'); 
+}
+
+.thread_status.hotfolder {
+ background-image: url('themes/sharepoint/hotfolder.png');  
+}
+
+.thread_status.hotclosefolder {
+   background-image: url('themes/sharepoint/hotlockfolder.png'); 
+}
+
+.thread_status.closefolder {
+   background-image: url('themes/sharepoint/lockfolder.png'); 
+}
+
+.thread_status.movefolder {
+    background-image: url('themes/sharepoint/movefolder.png');
+}
+
+.thread_status.newfolder {
+    background-image: url('themes/sharepoint/newfolder.png'); 
+}
+
+.thread_status.newhotfolder {
+ background-image: url('themes/sharepoint/newhotfolder.png');
+}
+
+.thread_status.newhotclosefolder {
+    background-image: url('themes/sharepoint/newhotlockfolder.png'); 
+}
+
+.thread_status.newclosefolder {
+    background-image: url('themes/sharepoint/newlockfolder.png');  
+}
+
+		]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1830"><![CDATA[/*
+ * MyBB: Sharepoint Frontend Theme 
+ *
+ * File: star_rating.css File
+ * 
+ * Authors: MyBB Themes & Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+	background: url('themes/sharepoint/star_rating.png') left -1000px repeat-x;
+	vertical-align: middle;
+}
+
+.star_rating {
+	position: relative;
+	width:80px;
+	height:16px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-position: left top;
+}
+
+td .star_rating {
+	margin: auto;
+}
+
+.star_rating li {
+	display: inline;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+	position: absolute;
+	text-indent: -1000px;
+	height: 16px;
+	line-height: 16px;
+	outline: none;
+	overflow: hidden;
+	border: none;
+	top:0;
+	left:0;
+}
+
+.star_rating_notrated li a:hover {
+	background-position: left bottom;
+}
+
+.star_rating li a.one_star {
+	width:20%;
+	z-index:6;
+}
+
+.star_rating li a.two_stars {
+	width:40%;
+	z-index:5;
+}
+
+.star_rating li a.three_stars {
+	width:60%;
+	z-index:4;
+}
+
+.star_rating li a.four_stars {
+	width:80%;
+	z-index:3;
+}
+
+.star_rating li a.five_stars {
+	width:100%;
+	z-index:2;
+}
+
+.star_rating .current_rating {
+	z-index:1;
+	background-position: left center;
+}
+
+.star_rating_success,
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.inline_rating {
+	background: url('themes/sharepoint/star_rating.png') left -1000px repeat-x;
+	float: left;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+
+		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1830"><![CDATA[/*
+ * MyBB: Sharepoint Frontend Theme 
+ *
+ * File: showthread.css File
+ * 
+ * Authors: MyBB Themes & Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+ul.thread_tools,
+ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 24px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+	background-repeat: no-repeat;
+}
+
+ul.thread_tools li.printable {
+    background-image: url('themes/sharepoint/printable.png');
+}
+
+ul.thread_tools li.sendthread {
+    background-image: url('themes/sharepoint/send.png');
+}
+
+ul.thread_tools li.subscription_add {
+    background-image: url('themes/sharepoint/subscribe.png');
+}
+
+ul.thread_tools li.subscription_remove {
+    background-image: url('themes/sharepoint/unsubscribe.png');
+}
+
+ul.thread_tools li.poll {
+    background-image: url('themes/sharepoint/poll.png'); 
+}
+
+.showthread_spinner {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+}
+		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1830"><![CDATA[/*
+ * MyBB: Sharepoint Frontend Theme 
+ *
+ * File: modcp.css File
+ * 
+ * Authors: MyBB Themes & Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-repeat: no-repeat;
+}
+
+.modcp_nav_home {
+	background-image: url('themes/sharepoint/modcp/home.png');  
+} 
+
+.modcp_nav_announcements {
+	background-image: url('themes/sharepoint/modcp/announcements.png'); 
+}
+
+.modcp_nav_reports {
+	background-image: url('themes/sharepoint/modcp/reports.png'); 
+}
+
+.modcp_nav_modqueue {
+	background-image: url('themes/sharepoint/modcp/modqueue.png'); 
+}
+
+.modcp_nav_modlogs {
+	background-image: url('themes/sharepoint/modcp/modlogs.png'); 
+}
+
+.modcp_nav_editprofile {
+	background-image: url('themes/sharepoint/modcp/editprofile.png'); 
+}
+
+.modcp_nav_banning {
+	background-image: url('themes/sharepoint/modcp/banning.png');  
+}
+
+.modcp_nav_warninglogs {
+	background-image: url('themes/sharepoint/modcp/warninglogs.png');  
+}
+
+.modcp_nav_ipsearch {
+	background-image: url('themes/sharepoint/modcp/ipsearch.png');  
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore,
+.label_radio_delete,
+.label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+.modqueue_mass {
+	list-style: none;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+}
+
+.modqueue_mass li {
+	margin-bottom: 4px;
+	padding: 0;
+}
+
+.modqueue_mass li a {
+	display: block;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+.modqueue_mass li a:hover {
+	background: #efefef;
+	border: 1px solid #ccc;
+	text-decoration: none;
+}
+
+
+		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1830"><![CDATA[/*
  * MyBB: Sharepoint Frontend Theme 
  *
  * File: css3.css File
@@ -74,9 +617,10 @@ a.button {
 	border-radius: 6px;
 }
 
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1820"><![CDATA[/*
+		<stylesheet name="global.css" version="1830"><![CDATA[/*
  * MyBB: Sharepoint Frontend Theme 
  *
  * File: global.css File
@@ -1959,549 +2503,12 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 
 /** Impromptu End */
-		]]>
-		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1820"><![CDATA[/*
- * MyBB: Sharepoint Frontend Theme 
- *
- * File: usercp.css File
- * 
- * Authors: MyBB Themes & Vintagedaddyo
- *
- * MyBB Version: 1.8
- *
- * Theme Version: 1.2
- * 
- */
-
-.usercp_nav_item {
-	display: block;
-	padding: 1px 0 1px 23px;
-	background-repeat: no-repeat;
-}
-
-.usercp_nav_composepm {
-	background-image: url('themes/sharepoint/usercp/composepm.png');
-}
-
-.usercp_nav_pmfolder {
-    background-image: url('themes/sharepoint/usercp/pmfolder.png'); 
-}
-
-.usercp_nav_sub_pmfolder {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/sub_pmfolder.png');  
-}
-
-.usercp_nav_trash_pmfolder {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/trash_pmfolder.png');  
-}
-
-.usercp_nav_pmtracking {
-	background-image: url('themes/sharepoint/usercp/pmtracking.png');  
-}
-
-.usercp_nav_pmfolders {
-    background-image: url('themes/sharepoint/usercp/editfolders.png');  
-}
-
-.usercp_nav_profile {
-	background-image: url('themes/sharepoint/usercp/profile.png');  
-}
-
-.usercp_nav_email {
-	padding-left: 40px;
-
-	background-image: url('themes/sharepoint/usercp/email.png');  
-}
-
-.usercp_nav_password {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/password.png');  
-}
-
-.usercp_nav_username {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/username.png');  
-} 
-
-.usercp_nav_editsig {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/editsig.png');  
-}
-
-.usercp_nav_avatar {
-	padding-left: 40px;
-	background-image: url('themes/sharepoint/usercp/avatar.png');  
-}
-
-.usercp_nav_options {
-	background-image: url('themes/sharepoint/usercp/options.png');  
-}
-
-.usercp_nav_usergroups {
-	background-image: url('themes/sharepoint/usercp/usergroups.png');  
-}
-
-.usercp_nav_editlists {
-	background-image: url('themes/sharepoint/usercp/editlists.png'); 
-}
-
-.usercp_nav_attachments {
-	background-image: url('themes/sharepoint/usercp/attachments.png'); 
-}
-
-.usercp_nav_drafts {
-	background-image: url('themes/sharepoint/usercp/drafts.png');  
-}
-
-.usercp_nav_subscriptions {
-	background-image: url('themes/sharepoint/usercp/subscriptions.png');  
-}
-
-.usercp_nav_fsubscriptions {
-	background-image: url('themes/sharepoint/usercp/fsubscriptions.png');  
-}
-
-.usercp_nav_viewprofile {
-	background-image: url('themes/sharepoint/usercp/viewprofile.png'); 
-}
-
-.usercp_nav_home {
-	background-image: url('themes/sharepoint/usercp/home.png');  
-}
-
-.usercp_notepad {
-	width: 99%;
-}
-
-.usercp_container {
-	margin: 5px;
-	padding: 8px;
-}
-
-.pmspace {
-	float: right;
-	margin: -3px 5px;
-}
-
-.pmspace_container {
-	background: #fff;
-	border: 1px solid #ccc;
-	width: 100px;
-	display: inline-block;
-}
-
-.pmspace_used {
-	display: inline-block;
-	color: #fff;
-	margin: -1px;
-}
-
-.pmspace_used.low {
-	border: 1px solid #0c5a01;
-	background: #167203;
-}
-
-.pmspace_used.medium {
-	background: #ff862b;
-	border: 1px solid #d7611e;
-}
-
-.pmspace_used.high {
-	background: #e73c3c;
-	border: 1px solid #c00;
-}
-
-.pmspace_unused {
-	display: inline-block;
-}
-
-.pmspace_text {
-	padding: 1px 5px;
-	display: inline-block;
-}
-		
-		
-		
-		]]>
-		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1820"><![CDATA[	/*
- * MyBB: Sharepoint Frontend Theme 
- *
- * File: thread_status.css File
- * 
- * Authors: MyBB Themes & Vintagedaddyo
- *
- * MyBB Version: 1.8
- *
- * Theme Version: 1.2
- * 
- */
-
-.thread_status {
-  display: inline-block;
-  background-repeat: no-repeat;
-  height: 18px;
-  width: 18px;
-}
-
-.thread_status.dot_folder {
-  background-image: url('themes/sharepoint/dot_folder.png');
-}
-
-.thread_status.dot_hotfolder {
-  background-image: url('themes/sharepoint/dot_hotfolder.png'); 
-}
-
-.thread_status.dot_hotclosefolder {
-  background-image: url('themes/sharepoint/dot_hotlockfolder.png'); 
-}
-
-.thread_status.dot_closefolder {
- background-image: url('themes/sharepoint/dot_lockfolder.png');
-}
-
-.thread_status.dot_newfolder {
- background-image: url('themes/sharepoint/dot_newfolder.png');
-}
-
-.thread_status.dot_newhotfolder {
- background-image: url('themes/sharepoint/dot_newhotfolder.png'); 
-}
-
-.thread_status.dot_newhotclosefolder {
- background-image: url('themes/sharepoint/dot_newhotlockfolder.png');  
-}
-
-.thread_status.dot_newclosefolder {
- background-image: url('themes/sharepoint/dot_newlockfolder.png'); 
-}
-
-.thread_status.folder {
- background-image: url('themes/sharepoint/folder.png'); 
-}
-
-.thread_status.hotfolder {
- background-image: url('themes/sharepoint/hotfolder.png');  
-}
-
-.thread_status.hotclosefolder {
-   background-image: url('themes/sharepoint/hotlockfolder.png'); 
-}
-
-.thread_status.closefolder {
-   background-image: url('themes/sharepoint/lockfolder.png'); 
-}
-
-.thread_status.movefolder {
-    background-image: url('themes/sharepoint/movefolder.png');
-}
-
-.thread_status.newfolder {
-    background-image: url('themes/sharepoint/newfolder.png'); 
-}
-
-.thread_status.newhotfolder {
- background-image: url('themes/sharepoint/newhotfolder.png');
-}
-
-.thread_status.newhotclosefolder {
-    background-image: url('themes/sharepoint/newhotlockfolder.png'); 
-}
-
-.thread_status.newclosefolder {
-    background-image: url('themes/sharepoint/newlockfolder.png');  
-}
-]]>
-		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1820"><![CDATA[/*
- * MyBB: Sharepoint Frontend Theme 
- *
- * File: star_rating.css File
- * 
- * Authors: MyBB Themes & Vintagedaddyo
- *
- * MyBB Version: 1.8
- *
- * Theme Version: 1.2
- * 
- */
-
-.star_rating,
-.star_rating li a:hover,
-.star_rating .current_rating {
-	background: url('themes/sharepoint/star_rating.png') left -1000px repeat-x;
-	vertical-align: middle;
-}
-
-.star_rating {
-	position: relative;
-	width:80px;
-	height:16px;
-	overflow: hidden;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	background-position: left top;
-}
-
-td .star_rating {
-	margin: auto;
-}
-
-.star_rating li {
-	display: inline;
-}
-
-.star_rating li a,
-.star_rating .current_rating {
-	position: absolute;
-	text-indent: -1000px;
-	height: 16px;
-	line-height: 16px;
-	outline: none;
-	overflow: hidden;
-	border: none;
-	top:0;
-	left:0;
-}
-
-.star_rating_notrated li a:hover {
-	background-position: left bottom;
-}
-
-.star_rating li a.one_star {
-	width:20%;
-	z-index:6;
-}
-
-.star_rating li a.two_stars {
-	width:40%;
-	z-index:5;
-}
-
-.star_rating li a.three_stars {
-	width:60%;
-	z-index:4;
-}
-
-.star_rating li a.four_stars {
-	width:80%;
-	z-index:3;
-}
-
-.star_rating li a.five_stars {
-	width:100%;
-	z-index:2;
-}
-
-.star_rating .current_rating {
-	z-index:1;
-	background-position: left center;
-}
-
-.star_rating_success,
-.success_message {
-	color: #00b200;
-	font-weight: bold;
-	font-size: 10px;
-	margin-bottom: 10px;
-}
-
-.inline_rating {
-	background: url('themes/sharepoint/star_rating.png') left -1000px repeat-x;
-	float: left;
-	vertical-align: middle;
-	padding-right: 5px;
-}
-
-
-		
-		
-		
-		]]>
-		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1820"><![CDATA[/*
- * MyBB: Sharepoint Frontend Theme 
- *
- * File: showthread.css File
- * 
- * Authors: MyBB Themes & Vintagedaddyo
- *
- * MyBB Version: 1.8
- *
- * Theme Version: 1.2
- * 
- */
-
-ul.thread_tools,
-ul.thread_tools li {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-ul.thread_tools li {
-	padding-left: 24px;
-	padding-bottom: 4px;
-	margin-bottom: 3px;
-	font-size: 11px;
-	background-repeat: no-repeat;
-}
-
-ul.thread_tools li.printable {
-    background-image: url('themes/sharepoint/printable.png');
-}
-
-ul.thread_tools li.sendthread {
-    background-image: url('themes/sharepoint/send.png');
-}
-
-ul.thread_tools li.subscription_add {
-    background-image: url('themes/sharepoint/subscribe.png');
-}
-
-ul.thread_tools li.subscription_remove {
-    background-image: url('themes/sharepoint/unsubscribe.png');
-}
-
-ul.thread_tools li.poll {
-    background-image: url('themes/sharepoint/poll.png'); 
-}
-
-.showthread_spinner {
-	margin: 0 auto;
-	display: block;
-	text-align: center;
-	padding: 20px;
-	width: 100%;
-}
-		
-		
-		
-		]]>
-		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1820"><![CDATA[/*
- * MyBB: Sharepoint Frontend Theme 
- *
- * File: modcp.css File
- * 
- * Authors: MyBB Themes & Vintagedaddyo
- *
- * MyBB Version: 1.8
- *
- * Theme Version: 1.2
- * 
- */
-
-.modcp_nav_item {
-	display: block;
-	padding: 1px 0 1px 23px;
-	background-repeat: no-repeat;
-}
-
-.modcp_nav_home {
-	background-image: url('themes/sharepoint/modcp/home.png');  
-} 
-
-.modcp_nav_announcements {
-	background-image: url('themes/sharepoint/modcp/announcements.png'); 
-}
-
-.modcp_nav_reports {
-	background-image: url('themes/sharepoint/modcp/reports.png'); 
-}
-
-.modcp_nav_modqueue {
-	background-image: url('themes/sharepoint/modcp/modqueue.png'); 
-}
-
-.modcp_nav_modlogs {
-	background-image: url('themes/sharepoint/modcp/modlogs.png'); 
-}
-
-.modcp_nav_editprofile {
-	background-image: url('themes/sharepoint/modcp/editprofile.png'); 
-}
-
-.modcp_nav_banning {
-	background-image: url('themes/sharepoint/modcp/banning.png');  
-}
-
-.modcp_nav_warninglogs {
-	background-image: url('themes/sharepoint/modcp/warninglogs.png');  
-}
-
-.modcp_nav_ipsearch {
-	background-image: url('themes/sharepoint/modcp/ipsearch.png');  
-}
-
-.modqueue_message {
-	overflow: auto;
-	max-height: 250px;
-}
-
-.modqueue_controls {
-	width: 270px;
-	float: right;
-	text-align: center;
-	border: 1px solid #ccc;
-	background: #fff;
-	padding: 6px;
-	font-weight: bold;
-}
-
-.modqueue_controls label {
-	margin-right: 8px;
-}
-
-.label_radio_ignore,
-.label_radio_delete,
-.label_radio_approve {
-	font-weight: bold;
-}
-
-.modqueue_meta {
-	color: #444;
-	font-size: 95%;
-	margin-bottom: 8px;
-}
-
-.modqueue_mass {
-	list-style: none;
-	margin: 0;
-	width: 150px;
-	padding: 0;
-}
-
-.modqueue_mass li {
-	margin-bottom: 4px;
-	padding: 0;
-}
-
-.modqueue_mass li a {
-	display: block;
-	padding: 4px;
-	border: 1px solid transparent;
-}
-
-.modqueue_mass li a:hover {
-	background: #efefef;
-	border: 1px solid #ccc;
-	text-decoration: none;
-}
-
-
-		
-		
 		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="footer" version="1820"><![CDATA[<debugstuff>
+		<template name="footer" version="1830"><![CDATA[<debugstuff>
 	</div>
 </div>
 <div id="footer">
@@ -2537,7 +2544,7 @@ ul.thread_tools li.poll {
 				<!-- Begin Theme Credits -->
 				
 				Theme &copy; 2008 by: <a href="http://mybbthemes.8ez.com" target="_blank">MyBB Themes</a></a>
-				&amp; <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				&amp; <a href="https://github.com/vintagedaddyo/MyBB_Theme_Sharepoint" target="_blank">Vintagedaddyo</a>
 				
                 <!-- End Theme Credits -->
 				<!-- End powered by -->
@@ -2583,15 +2590,15 @@ ul.thread_tools li.poll {
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1820"><![CDATA[<!-- Add Favicon -->
+		<template name="headerinclude" version="1830"><![CDATA[<!-- Add Favicon -->
 <link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
 <link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1827"></script>
 
 {$stylesheets}
 
@@ -2625,7 +2632,9 @@ $(document).ready(function(){
 <script type="text/javascript">
 <!--
 	lang.unknown_error = "{$lang->unknown_error}";
-
+	lang.confirm_title = "{$lang->confirm_title}";
+	lang.expcol_collapse = "{$lang->expcol_collapse}";
+	lang.expcol_expand = "{$lang->expcol_expand}";
 	lang.select2_match = "{$lang->select2_match}";
 	lang.select2_matches = "{$lang->select2_matches}";
 	lang.select2_nomatches = "{$lang->select2_nomatches}";

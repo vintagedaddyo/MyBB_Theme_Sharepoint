@@ -3,7 +3,9 @@
 Sharepoint v1.2
 » About:
 
-This a simple classic 1.4.x theme ported to 1.8.x for MyBB enthusiasts.
+This a simple classic 1.4.x theme (based on the Sharepoint ACP Style) ported to 1.8.x for MyBB enthusiasts.
+
+The old sharepoint ACP style that was ported to 1.8 can be found: https://github.com/vintagedaddyo/MyBB_ACP_Style_Sharepoint8
 
 Sharepoint v1.2
 » Installation:
@@ -24,7 +26,7 @@ Sharepoint v1.2
 
 History:
 
-
+03/19/2022 — Updated "Sharepoint-theme.xml" file to 1.8.30
 04/05/2019 — Updated "Sharepoint-theme.xml" file to 1.8.20
 09/11/2018 — Updated "Sharepoint-theme.xml" file to 1.8.19
 08/28/2018 — Updated "Sharepoint-theme.xml" file to 1.8.18
